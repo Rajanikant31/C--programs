@@ -1,26 +1,34 @@
 ﻿using System;
 
-namespace _4_oct_21
+namespace _4_oct_21_q4
 {
-    class Program
+    class Rectangle
     {
-        void addition(int a, int b)
+        double _length;
+        double _breadth;
+        public Rectangle()
         {
-            int total;
-            total = a + b;
-            Console.WriteLine("Sum= " + total);
+            _length = 13.43;
+            _breadth = 4.54;
+
         }
-        void addition(int a, int b, int c)
+        public Rectangle(double len, double bre)
         {
-            int total2;
-            total2 = a + b + c;
-            Console.WriteLine("Sum = " + total2);
+            _length = len;
+            _breadth = bre;
         }
+        public double Area()
+        {
+            return _length * _breadth;
+        }
+
         static void Main(string[] args)
         {
-            Program p = new Program();
-            p.addition(2, 3);
-            p.addition(2, 5, 3);
+            Rectangle r = new Rectangle();
+            Console.WriteLine("Area of rectangle=" + r.Area());
+            Rectangle r2 = new Rectangle(2.3, 3.6);
+            Console.WriteLine("Area of rectangle = "+r2.Area());
         }
     }
 }
+//this is constructor program example
